@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOLO Object Detection</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+      padding: 24px 32px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* ── Upload card ── */
+    .upload-card {
+      background: #1e293b;
+      border: 2px dashed #334155;
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .upload-card.drag-over {
+      border-color: #6366f1;
+      background: #1e2a45;
+    }
+
+    .upload-icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .upload-card h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .upload-card p {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
+    #fileInput { display: none; }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+
+    .btn:active { transform: scale(0.97); }
+    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #7c3aed);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #334155;
+      color: #e2e8f0;
+      margin-left: 10px;
+    }
+
+    .btn:hover:not(:disabled) { opacity: 0.88; }
+
+    /* ── Preview ── */
+    #previewSection {
+      margin-top: 20px;
+      display: none;
+      align-items: center;
+      gap: 16px;
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+
+    #previewSection img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #334155;
+    }
+
+    #previewSection .meta { flex: 1; }
+    #previewSection .meta .fname { font-weight: 600; font-size: 0.95rem; }
+    #previewSection .meta .fsize { font-size: 0.8rem; color: #94a3b8; margin-top: 2px; }
+
+    /* ── Spinner ── */
+    #loadingSection {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      gap: 16px;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid #334155;
+      border-top-color: #6366f1;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Error ── */
+    #errorSection {
+      display: none;
+      background: #450a0a;
+      border: 1px solid #7f1d1d;
+      color: #fca5a5;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ── Results ── */
+    #resultsSection { display: none; margin-top: 32px; }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: #312e81;
+      color: #a5b4fc;
+      border-radius: 99px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .badge.green {
+      background: #14532d;
+      color: #86efac;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 680px) {
+      .results-grid { grid-template-columns: 1fr; }
+    }
+
+    .result-card {
+      background: #1e293b;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .result-card .card-header {
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-header .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #6366f1;
+    }
+
+    .card-header .dot.green { background: #22c55e; }
+
+    .result-card img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+      max-height: 420px;
+      background: #0f172a;
+    }
+
+    .result-card .card-footer {
+      padding: 10px 16px;
+      font-size: 0.78rem;
+      color: #64748b;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #818cf8;
+      text-decoration: none;
+    }
+
+    .download-link:hover { text-decoration: underline; }
+
+    /* ── New prediction btn ── */
+    #newBtn {
+      display: none;
+      margin: 28px auto 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>YOLO Object Detection</h1>
+  <p>Upload an image to detect objects using your custom-trained model</p>
+</header>
+
+<main>
+  <!-- Upload area -->
+  <div class="upload-card" id="dropZone">
+    <div class="upload-icon">📷</div>
+    <h2>Drop an image here or click to browse</h2>
+    <p>Supports PNG, JPG, JPEG, WEBP &mdash; max 16 MB</p>
+    <input type="file" id="fileInput" accept="image/*" />
+    <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+      Choose Image
+    </button>
+  </div>
+
+  <!-- Selected file preview -->
+  <div id="previewSection">
+    <img id="previewThumb" src="" alt="preview" />
+    <div class="meta">
+      <div class="fname" id="previewName"></div>
+      <div class="fsize" id="previewSize"></div>
+    </div>
+    <button class="btn btn-primary" id="detectBtn" onclick="runDetection()">
+      Run Detection
+    </button>
+    <button class="btn btn-secondary" onclick="resetAll()">Clear</button>
+  </div>
+
+  <!-- Loading -->
+  <div id="loadingSection">
+    <div class="spinner"></div>
+    <p style="color:#94a3b8;">Running detection, please wait&hellip;</p>
+  </div>
+
+  <!-- Error -->
+  <div id="errorSection"></div>
+
+  <!-- Results -->
+  <div id="resultsSection">
+    <div class="badge-row">
+      <span id="detectionBadge" class="badge"></span>
+      <span id="labelBadges"></span>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="card-header">
+          <span class="dot"></span> Original Image
+        </div>
+        <img id="originalImg" src="" alt="Original" />
+        <div class="card-footer">Uploaded image (no annotations)</div>
+      </div>
+      <div class="result-card">
+        <div class="card-header">
+          <span class="dot green"></span> Predicted Output
+        </div>
+        <img id="predictedImg" src="" alt="Prediction" />
+        <div class="card-footer">
+          Bounding boxes drawn by YOLOv8/v11
+          <br />
+          <a id="downloadLink" class="download-link" download>⬇ Download result</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- New prediction -->
+  <div style="text-align:center">
+    <button class="btn btn-secondary" id="newBtn" onclick="resetAll()">
+      ↩ Try Another Image
+    </button>
+  </div>
+</main>
+
+<script>
+  const dropZone    = document.getElementById("dropZone");
+  const fileInput   = document.getElementById("fileInput");
+  const previewSec  = document.getElementById("previewSection");
+  const previewThumb= document.getElementById("previewThumb");
+  const previewName = document.getElementById("previewName");
+  const previewSize = document.getElementById("previewSize");
+  const detectBtn   = document.getElementById("detectBtn");
+  const loadingSec  = document.getElementById("loadingSection");
+  const errorSec    = document.getElementById("errorSection");
+  const resultsSec  = document.getElementById("resultsSection");
+  const newBtn      = document.getElementById("newBtn");
+
+  let selectedFile = null;
+
+  // ── Drag & drop ──
+  dropZone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZone.classList.add("drag-over");
+  });
+
+  dropZone.addEventListener("dragleave", () => dropZone.classList.remove("drag-over"));
+
+  dropZone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropZone.classList.remove("drag-over");
+    const f = e.dataTransfer.files[0];
+    if (f) handleFile(f);
+  });
+
+  fileInput.addEventListener("change", () => {
+    if (fileInput.files[0]) handleFile(fileInput.files[0]);
+  });
+
+  function handleFile(file) {
+    const allowed = ["image/png", "image/jpeg", "image/webp", "image/bmp"];
+    if (!allowed.includes(file.type)) {
+      showError("Unsupported file type. Please upload PNG, JPG, JPEG, or WEBP.");
+      return;
+    }
+    if (file.size > 16 * 1024 * 1024) {
+      showError("File too large. Maximum size is 16 MB.");
+      return;
+    }
+    selectedFile = file;
+    hideError();
+    hideResults();
+
+    const reader = new FileReader();
+    reader.onload = (e) => { previewThumb.src = e.target.result; };
+    reader.readAsDataURL(file);
+
+    previewName.textContent = file.name;
+    previewSize.textContent = (file.size / 1024).toFixed(1) + " KB";
+    previewSec.style.display = "flex";
+  }
+
+  async function runDetection() {
+    if (!selectedFile) return;
+
+    detectBtn.disabled = true;
+    hideError();
+    hideResults();
+    loadingSec.style.display = "flex";
+
+    const formData = new FormData();
+    formData.append("image", selectedFile);
+
+    try {
+      const res = await fetch("/predict", { method: "POST", body: formData });
+      const data = await res.json();
+
+      loadingSec.style.display = "none";
+
+      if (!res.ok || data.error) {
+        showError(data.error || "An unexpected error occurred.");
+        detectBtn.disabled = false;
+        return;
+      }
+
+      showResults(data);
+    } catch (err) {
+      loadingSec.style.display = "none";
+      showError("Network error: " + err.message);
+      detectBtn.disabled = false;
+    }
+  }
+
+  function showResults({ original, predicted, detections, labels }) {
+    document.getElementById("originalImg").src  = original  + "?t=" + Date.now();
+    document.getElementById("predictedImg").src = predicted + "?t=" + Date.now();
+    document.getElementById("downloadLink").href = predicted;
+    document.getElementById("downloadLink").setAttribute("download", "prediction.jpg");
+
+    const badge = document.getElementById("detectionBadge");
+    badge.textContent = detections === 1
+      ? "1 object detected"
+      : `${detections} objects detected`;
+    badge.className = "badge" + (detections > 0 ? " green" : "");
+
+    const labelWrap = document.getElementById("labelBadges");
+    labelWrap.innerHTML = (labels || [])
+      .map(l => `<span class="badge">${l}</span>`)
+      .join(" ");
+
+    resultsSec.style.display = "block";
+    newBtn.style.display = "inline-block";
+    previewSec.style.display = "none";
+    dropZone.style.display = "none";
+    detectBtn.disabled = false;
+  }
+
+  function hideResults() {
+    resultsSec.style.display = "none";
+    newBtn.style.display = "none";
+  }
+
+  function showError(msg) {
+    errorSec.textContent = "Error: " + msg;
+    errorSec.style.display = "block";
+  }
+
+  function hideError() {
+    errorSec.style.display = "none";
+  }
+
+  function resetAll() {
+    selectedFile = null;
+    fileInput.value = "";
+    previewSec.style.display = "none";
+    loadingSec.style.display = "none";
+    hideError();
+    hideResults();
+    dropZone.style.display = "block";
+    dropZone.classList.remove("drag-over");
+    detectBtn.disabled = false;
+  }
+</script>
+
+</body>
+</html>
