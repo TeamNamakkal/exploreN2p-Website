@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIS Engineer – ExploreN2P</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #0f172a; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="w-full border-b border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
+
+      <!-- Left: Logo + Location -->
+      <div class="flex items-center gap-4">
+        <a href="./index.html" class="inline-flex items-center gap-4">
+          <img src="./log.png" alt="ExploreN2P Logo" class="h-12 md:h-14 w-auto object-contain" />
+        </a>
+
+        <div class="text-[11px] font-bold uppercase tracking-widest text-slate-600 flex items-center gap-3">
+          <span>Plano, TX (In-Person)</span>
+          <span class="text-slate-300">|</span>
+          <span>Live Online</span>
+        </div>
+      </div>
+
+      <!-- Right: Batch Info -->
+      <div class="bg-blue-50 text-blue-700 px-4 py-1 rounded text-[11px] font-bold uppercase tracking-widest">
+        Small Batches (3–6 Students)
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <a href="./index.html" class="text-sm font-bold text-blue-700 inline-flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-4 h-4"></i>
+      Back to Programs
+    </a>
+
+    <div class="mt-8 grid md:grid-cols-2 gap-12 items-start">
+
+      <!-- Left -->
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Program</p>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          GIS Engineer (Telecom & Infrastructure)
+        </h1>
+
+        <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+          Every modern infrastructure decision begins with GIS. Telecom fiber routes, microwave paths, cell site placement,
+          utility asset management, transportation planning, and government infrastructure programs all rely on spatial data
+          to reduce cost, risk, and rework.
+        </p>
+
+        <div class="mt-6 bg-blue-50 border border-blue-100 p-5 rounded-xl flex gap-3 text-blue-900">
+          <i data-lucide="target" class="w-6 h-6 mt-1 text-blue-700"></i>
+          <div>
+            <p class="font-extrabold">The real need is GIS engineers, not cartographers.</p>
+            <p class="text-sm mt-1 text-slate-700">
+              Organizations need professionals who can turn spatial data into engineering decisions—corridor optimization,
+              decision-ready maps, and GIS workflows integrated with network planning.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-slate-700">17 Weeks</span>
+          <span class="bg-blue-50 border border-blue-100 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-blue-700">Multi-industry</span>
+          <span class="bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-slate-700">QGIS · ArcGIS · Google Earth Pro</span>
+          <span class="bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-slate-700">Fiber · Microwave · Cell Sites</span>
+        </div>
+
+        <p class="mt-6 text-slate-700 leading-relaxed">
+          The talent gap exists on both sides. GIS graduates often know tools but lack domain understanding. Telecom and
+          infrastructure engineers understand networks but struggle with spatial analysis and professional GIS workflows.
+          This program builds both: software skill and infrastructure decision-making.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#consultation"
+             class="inline-flex items-center justify-center gap-3 bg-blue-700 hover:bg-blue-800 text-white font-extrabold py-3 px-8 rounded-full text-sm shadow transition">
+            Book a Free 30-Minute Consultation
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+          </a>
+
+          <a href="https://www.youtube.com/@exploreN2P" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-3 border border-slate-300 hover:border-slate-400 text-slate-900 font-bold py-3 px-8 rounded-full text-sm transition">
+            <i data-lucide="youtube" class="w-4 h-4"></i>
+            Watch Teaching Style
+          </a>
+        </div>
+
+        <p class="mt-3 text-xs uppercase tracking-widest text-slate-500">
+          First 3 live classes are free to evaluate. Withdraw after session 3 with no payment obligation.
+        </p>
+      </div>
+
+      <!-- Right: Outcomes -->
+      <div class="border border-slate-200 rounded-2xl p-8 bg-white">
+        <h2 class="text-sm font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-5 h-5 text-blue-700"></i>
+          Clear, Measurable Outcomes
+        </h2>
+
+        <p class="text-sm text-slate-700 leading-relaxed">
+          By Week 17, you will have produced portfolio-grade GIS deliverables across telecom and infrastructure:
+        </p>
+
+        <ul class="mt-5 text-sm text-slate-700 space-y-3">
+          <li class="flex gap-2"><span class="text-slate-400">•</span> 30 km fiber route design (corridor + ROW + cost optimization)</li>
+          <li class="flex gap-2"><span class="text-slate-400">•</span> 5-hop microwave path analysis (DEM-based LOS + Fresnel clearance)</li>
+          <li class="flex gap-2"><span class="text-slate-400">•</span> Cell site study: 10 optimal tower locations (terrain + zoning + demographics)</li>
+          <li class="flex gap-2"><span class="text-slate-400">•</span> Capstone: Multi-network design package (database + maps + report + routing recommendations)</li>
+        </ul>
+
+        <div class="mt-8 bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Deliverables that matter</p>
+          <p class="text-sm text-slate-700">
+            You graduate with a structured GIS database, professional maps, and analysis artifacts that hiring managers can review.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ROLES + INDUSTRIES -->
+  <section class="max-w-7xl mx-auto px-6 pb-16 md:pb-20 grid md:grid-cols-2 gap-10">
+    <div class="border border-slate-200 rounded-2xl p-8 bg-white">
+      <h2 class="text-sm font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+        <i data-lucide="briefcase" class="w-5 h-5 text-blue-700"></i>
+        Target Job Roles
+      </h2>
+      <ul class="text-sm text-slate-700 space-y-3">
+        <li class="flex gap-2"><span class="text-slate-400">•</span> GIS Analyst (Telecom)</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Network Planning GIS Specialist</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Infrastructure GIS Engineer</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Utility Network GIS Designer</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Geospatial Data Analyst</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> GIS Project Coordinator</li>
+      </ul>
+    </div>
+
+    <div class="border border-slate-200 rounded-2xl p-8 bg-slate-50">
+      <h2 class="text-sm font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+        <i data-lucide="building-2" class="w-5 h-5 text-blue-700"></i>
+        Industries Hiring
+      </h2>
+      <ul class="text-sm text-slate-700 space-y-3">
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Telecom carriers & ISPs</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Utilities (electric, gas, water)</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Government (municipal, county, state)</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Transportation & logistics</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Real estate & urban planning</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Engineering firms</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROGRAM STRUCTURE -->
+  <section class="max-w-7xl mx-auto px-6 pb-16 md:pb-20">
+    <div class="border border-slate-200 rounded-2xl p-8 bg-white">
+      <h2 class="text-sm font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+        <i data-lucide="calendar-days" class="w-5 h-5 text-blue-700"></i>
+        Program Structure (Week-by-Week)
+      </h2>
+
+      <!-- Weeks 1-4 -->
+      <div class="mb-8">
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-blue-700 mb-3">
+          Weeks 1–4: GIS Fundamentals
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 1: GIS Concepts & Foundations</p>
+            <ul class="mt-2 space-y-1">
+              <li>• GIS overview and applications</li>
+              <li>• Coordinate systems and projections</li>
+              <li>• Vector vs. raster data</li>
+              <li class="font-semibold">Lab: Create first map in QGIS</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 2: Google Earth Pro (Advanced)</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Advanced features and workflows</li>
+              <li>• Path profiling and elevation data</li>
+              <li>• KML/KMZ creation</li>
+              <li class="font-semibold">Lab: Network site mapping in Google Earth</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 3: QGIS Basics</p>
+            <ul class="mt-2 space-y-1">
+              <li>• QGIS interface and core tools</li>
+              <li>• Data import (shapefiles, CSV, KML)</li>
+              <li>• Attribute tables and queries</li>
+              <li class="font-semibold">Lab: Create professional map in QGIS</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 4: ArcGIS Basics</p>
+            <ul class="mt-2 space-y-1">
+              <li>• ArcGIS Pro interface</li>
+              <li>• Geodatabase concepts</li>
+              <li>• Feature classes and symbology</li>
+              <li class="font-semibold">Lab: Build telecom asset map in ArcGIS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weeks 5-8 -->
+      <div class="mb-8">
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-blue-700 mb-3">
+          Weeks 5–8: GIS for Telecom Networks
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 5: Fiber Route Planning</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Corridor identification</li>
+              <li>• Right-of-way analysis</li>
+              <li>• Route optimization</li>
+              <li class="font-semibold">Lab: Plan 30 km fiber route</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 6: Fiber Network Asset Mapping</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Cable inventory</li>
+              <li>• Splice point mapping</li>
+              <li>• Vault and manhole locations</li>
+              <li class="font-semibold">Lab: Complete fiber network GIS database</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 7: Microwave Path Analysis</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Terrain modeling with DEM</li>
+              <li>• Line-of-sight analysis</li>
+              <li>• Fresnel zone clearance</li>
+              <li class="font-semibold">Lab: GIS-based microwave path study (5 hops)</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 8: Cell Site Planning</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Cell tower location analysis</li>
+              <li>• Coverage prediction basics</li>
+              <li>• Site acquisition factors</li>
+              <li class="font-semibold">Lab: Identify 10 candidate cell sites using GIS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weeks 9-11 -->
+      <div class="mb-8">
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-blue-700 mb-3">
+          Weeks 9–11: GIS for Other Industries
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 9: Utility Networks</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Electric, gas, water mapping</li>
+              <li>• Pole and conduit mapping</li>
+              <li>• Joint-use pole analysis</li>
+              <li class="font-semibold">Lab: Map electric distribution network</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 10: Transportation & Logistics</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Road network analysis</li>
+              <li>• Routing and navigation</li>
+              <li>• Logistics optimization</li>
+              <li class="font-semibold">Lab: Optimize delivery routes using GIS</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 md:col-span-2">
+            <p class="font-extrabold text-slate-900">Week 11: Real Estate & Urban Planning</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Parcel mapping</li>
+              <li>• Zoning and land use</li>
+              <li>• Site selection analysis</li>
+              <li class="font-semibold">Lab: Site analysis for retail location</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weeks 12-14 -->
+      <div class="mb-8">
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-blue-700 mb-3">
+          Weeks 12–14: Advanced GIS Skills
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 12: Spatial Analysis</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Buffer, proximity, overlay analysis</li>
+              <li>• Intersect, union, and network analysis</li>
+              <li class="font-semibold">Lab: Multi-criteria site selection</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 13: Integration with CAD & Network Tools</p>
+            <ul class="mt-2 space-y-1">
+              <li>• AutoCAD integration</li>
+              <li>• DXF, DWG, KML exchange</li>
+              <li>• Integration with network planning tools</li>
+              <li class="font-semibold">Lab: Import CAD site plans into GIS</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 md:col-span-2">
+            <p class="font-extrabold text-slate-900">Week 14: Data Management & Automation</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Python basics for GIS (PyQGIS, ArcPy)</li>
+              <li>• Batch processing and automated reporting</li>
+              <li class="font-semibold">Lab: Automate map production with Python</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weeks 15-17 -->
+      <div>
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-blue-700 mb-3">
+          Weeks 15–17: Capstone + Career Readiness
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Weeks 15–16: Capstone Project</p>
+            <p class="mt-2 font-semibold text-slate-900">Multi-Network GIS Planning Project</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Fiber backbone route (30 km)</li>
+              <li>• Microwave backbone (5 hops with terrain)</li>
+              <li>• Cell site analysis (10 candidate sites)</li>
+              <li>• Utility coordination (joint trenching)</li>
+              <li>• Complete asset database</li>
+            </ul>
+            <p class="mt-3 font-semibold">Deliverables:</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Comprehensive GIS database</li>
+              <li>• Professional maps (fiber, microwave, cell sites)</li>
+              <li>• Spatial analysis report</li>
+              <li>• Route optimization recommendations</li>
+              <li>• Asset inventory tables + integration notes</li>
+              <li>• Professional presentation</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 17: Career Readiness</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Resume for GIS roles (telecom, utilities, government)</li>
+              <li>• LinkedIn optimization with GIS portfolio</li>
+              <li>• Job search strategy</li>
+              <li>• Interview preparation (software + use-cases)</li>
+              <li class="font-semibold">Mock interview + feedback</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ALL PROGRAMS INCLUDE -->
+  <section class="max-w-7xl mx-auto px-6 pb-16 md:pb-20">
+    <div class="border border-slate-200 rounded-2xl p-8 bg-slate-50">
+      <h2 class="text-sm font-extrabold text-slate-900 mb-2 flex items-center gap-2">
+        <i data-lucide="layers" class="w-5 h-5 text-blue-700"></i>
+        All Programs Include
+      </h2>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+        <div class="flex gap-3">
+          <i data-lucide="clipboard-check" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Weekly quizzes</strong> (assess understanding)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="wrench" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Problem-solving sessions</strong> (troubleshoot real scenarios)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="message-circle" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Q&amp;A sessions</strong> (clarify doubts)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="book-open" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Access to training materials</strong> (PDF notes, video library)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="terminal" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Software/tool access</strong> (industry-standard and open-source)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="users" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Small class size</strong> (5 students maximum)</span>
+        </div>
+        <div class="flex gap-3 md:col-span-2">
+          <i data-lucide="map-pin" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Flexible delivery</strong> (in-person Plano, TX or live online)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA + FORM -->
+  <section class="max-w-7xl mx-auto px-6 pb-10 text-center">
+    <a href="#consultation"
+       class="inline-flex items-center justify-center gap-3 bg-blue-700 hover:bg-blue-800 text-white font-extrabold py-4 px-10 rounded-full text-lg shadow-lg transition">
+      Book a Free 30-Minute Consultation
+      <i data-lucide="calendar" class="w-5 h-5"></i>
+    </a>
+    <p class="mt-4 text-xs uppercase tracking-widest text-slate-500">
+      First 3 classes are free to evaluate · Flexible payment plans available
+    </p>
+  </section>
+
+  <section id="consultation" class="max-w-4xl mx-auto px-6 pb-24">
+    <div class="bg-white border border-slate-200 rounded-2xl p-8">
+      <h2 class="text-2xl font-extrabold mb-2 text-slate-900">Request a Free 30-Minute Consultation</h2>
+      <p class="text-slate-600 text-sm mb-6">
+        Share your details and we will contact you to schedule a 30-minute call (Plano in-person or Live Online).
+      </p>
+
+      <form action="https://formsubmit.co/n.surendran@greenfluxion.com" method="POST" class="space-y-4">
+        <input type="hidden" name="_subject" value="ExploreN2P Consultation Request (GIS Program)">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Name</label>
+            <input name="name" required
+                   class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                   placeholder="Your full name" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Email</label>
+            <input name="email" type="email" required
+                   class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                   placeholder="you@example.com" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Phone (optional)</label>
+            <input name="phone"
+                   class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                   placeholder="+1 (___) ___-____" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Mode</label>
+            <select name="mode"
+                    class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+              <option>Live Online</option>
+              <option>Plano, TX (In-Person)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Your background & goal</label>
+          <textarea name="message" rows="4" required
+                    class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    placeholder="Tell us your background and goal (telecom GIS, fiber route planning, utilities, mapping automation, etc.)"></textarea>
+        </div>
+
+        <button type="submit"
+                class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full transition-all text-sm shadow-lg">
+          Submit Request
+        </button>
+
+        <p class="text-[11px] text-slate-500">
+          Note: You may be asked to confirm the first submission email to activate form delivery.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 text-sm">
+      <div class="space-y-3">
+        <p class="flex items-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4 text-blue-400"></i>
+          <span>Email:</span>
+          <span class="text-white font-semibold">n.surendran@greenfluxion.com</span>
+        </p>
+        <p class="flex items-center gap-2">
+          <i data-lucide="globe" class="w-4 h-4 text-blue-400"></i>
+          <span>Website:</span>
+          <span class="text-white font-semibold">exploren2p.com</span>
+        </p>
+        <a href="https://www.youtube.com/@exploreN2P" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-blue-400 underline underline-offset-4">
+          <i data-lucide="youtube" class="w-4 h-4"></i>
+          youtube.com/@exploreN2P
+        </a>
+      </div>
+
+      <div class="md:text-right text-xs">
+        <p class="font-bold text-blue-400 mb-2 uppercase tracking-widest">Plano Training Center</p>
+        <p class="text-slate-300 leading-relaxed">
+          ExploreN2P Academy<br>
+          9300 Coit Rd, Apt 214<br>
+          Plano, TX 75025
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mt-10 text-[10px] uppercase tracking-[0.25em] font-bold text-slate-600">
+      © 2024 ExploreN2P. Industry-Focused Telecom Training.
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+
+</body>
+</html>

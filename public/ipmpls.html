@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IP/MPLS Core Network Engineer – ExploreN2P</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #0f172a; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="w-full border-b border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-4">
+        <a href="./index.html" class="inline-flex items-center gap-4">
+          <img src="./log.png" alt="ExploreN2P Logo" class="h-12 md:h-14 w-auto object-contain" />
+        </a>
+
+        <div class="text-[11px] font-bold uppercase tracking-widest text-slate-600 flex items-center gap-3">
+          <span>Plano, TX (In-Person)</span>
+          <span class="text-slate-300">|</span>
+          <span>Live Online</span>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 text-blue-700 px-4 py-1 rounded text-[11px] font-bold uppercase tracking-widest">
+        Small Batches (3–6 Students)
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+    <a href="./index.html" class="text-sm font-bold text-blue-700 inline-flex items-center gap-2">
+      <i data-lucide="arrow-left" class="w-4 h-4"></i>
+      Back to Programs
+    </a>
+
+    <div class="mt-8 grid md:grid-cols-2 gap-12 items-start">
+      <!-- Left -->
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Program</p>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          IP/MPLS Core Network Engineer
+        </h1>
+
+        <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+          Modern networks run on IP. Scalable networks run on IP/MPLS. Service providers, enterprises, and cloud platforms
+          depend on resilient packet networks to deliver applications, connectivity, and services. 5G core networks are IP-based.
+          Enterprises are modernizing WANs with SD-WAN and hybrid connectivity. Data centers are scaling rapidly to support cloud
+          and AI workloads.
+        </p>
+
+        <div class="mt-6 bg-blue-50 border border-blue-100 p-5 rounded-xl flex gap-3 text-blue-900">
+          <i data-lucide="alert-triangle" class="w-6 h-6 mt-1 text-blue-700"></i>
+          <div>
+            <p class="font-extrabold">The industry shortage is design-level IP/MPLS engineers.</p>
+            <p class="text-sm mt-1 text-slate-700">
+              Many engineers pass protocol exams but struggle with real architecture, failure reasoning, and end-to-end troubleshooting.
+              This program builds engineering capability—not memorization.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-slate-700">17 Weeks</span>
+          <span class="bg-blue-50 border border-blue-100 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-blue-700">Architecture-driven</span>
+          <span class="bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-slate-700">MPLS · BGP · OSPF · QoS</span>
+          <span class="bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-slate-700">Campus · DC Leaf–Spine</span>
+        </div>
+
+        <p class="mt-6 text-slate-700 leading-relaxed">
+          Organizations need engineers who can reason about packet flow and failure scenarios—not engineers who rely on trial and error
+          in production networks. All work is performed in professional simulation environments using realistic topologies and configurations.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#consultation"
+             class="inline-flex items-center justify-center gap-3 bg-blue-700 hover:bg-blue-800 text-white font-extrabold py-3 px-8 rounded-full text-sm shadow transition">
+            Book a Free 30-Minute Consultation
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+          </a>
+
+          <a href="https://www.youtube.com/@exploreN2P" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-3 border border-slate-300 hover:border-slate-400 text-slate-900 font-bold py-3 px-8 rounded-full text-sm transition">
+            <i data-lucide="youtube" class="w-4 h-4"></i>
+            Watch Teaching Style
+          </a>
+        </div>
+
+        <p class="mt-3 text-xs uppercase tracking-widest text-slate-500">
+          First 3 live classes are free to evaluate. Withdraw after session 3 with no payment obligation.
+        </p>
+      </div>
+
+      <!-- Right: Outcomes -->
+      <div class="border border-slate-200 rounded-2xl p-8 bg-white">
+        <h2 class="text-sm font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-5 h-5 text-blue-700"></i>
+          Clear, Measurable Outcomes
+        </h2>
+
+        <p class="text-sm text-slate-700 leading-relaxed">
+          By Week 17, you will have designed and implemented:
+        </p>
+
+        <ul class="mt-5 text-sm text-slate-700 space-y-3">
+          <li class="flex gap-2"><span class="text-slate-400">•</span>
+            Service provider MPLS core network (10-router topology using OSPF, BGP, MPLS L3VPN, IP addressing, and routing policies)
+          </li>
+          <li class="flex gap-2"><span class="text-slate-400">•</span>
+            Enterprise campus network (500+ users across three buildings: core–distribution–access, VLANs, redundancy, HA)
+          </li>
+          <li class="flex gap-2"><span class="text-slate-400">•</span>
+            Data center Leaf–Spine network (Clos architecture concepts, high availability, traffic flow design for 16+ servers)
+          </li>
+          <li class="flex gap-2"><span class="text-slate-400">•</span>
+            Capstone: Full multi-site enterprise network (HQ + DC + 3 branches over MPLS VPN with QoS + DR strategy)
+          </li>
+        </ul>
+
+        <div class="mt-8 bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Portfolio-first</p>
+          <p class="text-sm text-slate-700">
+            You graduate with design artifacts—diagrams, addressing plans, policy configurations, and reasoning documents hiring managers can review.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLES + INDUSTRIES -->
+  <section class="max-w-7xl mx-auto px-6 pb-16 md:pb-20 grid md:grid-cols-2 gap-10">
+    <div class="border border-slate-200 rounded-2xl p-8 bg-white">
+      <h2 class="text-sm font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+        <i data-lucide="briefcase" class="w-5 h-5 text-blue-700"></i>
+        Target Job Roles
+      </h2>
+      <ul class="text-sm text-slate-700 space-y-3">
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Network Engineer</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> MPLS Design Engineer</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Enterprise Network Architect</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Data Center Network Engineer</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> IP Core Planner</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> NOC Engineer (Advanced)</li>
+      </ul>
+    </div>
+
+    <div class="border border-slate-200 rounded-2xl p-8 bg-slate-50">
+      <h2 class="text-sm font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+        <i data-lucide="building-2" class="w-5 h-5 text-blue-700"></i>
+        Industries Hiring
+      </h2>
+      <ul class="text-sm text-slate-700 space-y-3">
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Service providers (AT&amp;T, Verizon, Lumen, Comcast)</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Enterprises (banks, healthcare, retail)</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Cloud providers (AWS, Azure, GCP networking)</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> Data center operators</li>
+        <li class="flex gap-2"><span class="text-slate-400">•</span> System integrators</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROGRAM STRUCTURE -->
+  <section class="max-w-7xl mx-auto px-6 pb-16 md:pb-20">
+    <div class="border border-slate-200 rounded-2xl p-8 bg-white">
+      <h2 class="text-sm font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+        <i data-lucide="calendar-days" class="w-5 h-5 text-blue-700"></i>
+        Program Structure (Week-by-Week)
+      </h2>
+
+      <!-- WEEKS 1-7 -->
+      <div class="mb-10">
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-blue-700 mb-3">
+          Weeks 1–7: IP/MPLS Packet Core Networks
+        </h3>
+        <p class="text-sm text-slate-600 mb-5">Design service provider core networks</p>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 1: IP Routing Fundamentals</p>
+            <ul class="mt-2 space-y-1">
+              <li>• IP addressing and subnetting</li>
+              <li>• Static and dynamic routing</li>
+              <li>• Routing protocol overview</li>
+              <li class="font-semibold">Lab: Build basic routed network in GNS3</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 2: OSPF</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Operation and areas</li>
+              <li>• Hierarchical design</li>
+              <li>• Metrics and troubleshooting</li>
+              <li class="font-semibold">Lab: Design OSPF network (3 areas, 10 routers)</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 3: BGP</p>
+            <ul class="mt-2 space-y-1">
+              <li>• eBGP vs iBGP</li>
+              <li>• Attributes and path selection</li>
+              <li>• Route filtering and policy</li>
+              <li class="font-semibold">Lab: Configure BGP for service provider (AS peering)</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 4: IS-IS Routing</p>
+            <ul class="mt-2 space-y-1">
+              <li>• IS-IS basics</li>
+              <li>• IS-IS vs OSPF comparison</li>
+              <li>• Service provider use cases</li>
+              <li class="font-semibold">Lab: Implement IS-IS in core network</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 5: MPLS Fundamentals</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Label switching concepts</li>
+              <li>• LDP (Label Distribution Protocol)</li>
+              <li>• MPLS forwarding plane</li>
+              <li class="font-semibold">Lab: Build MPLS core network in GNS3</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 6: MPLS VPN Services</p>
+            <ul class="mt-2 space-y-1">
+              <li>• MPLS L3VPN and L2VPN</li>
+              <li>• VRF (Virtual Routing and Forwarding)</li>
+              <li>• PE-CE routing protocols</li>
+              <li class="font-semibold">Lab: Implement MPLS L3VPN for multi-site customer</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 md:col-span-2">
+            <p class="font-extrabold text-slate-900">Week 7: MPLS-TE &amp; QoS</p>
+            <ul class="mt-2 space-y-1">
+              <li>• MPLS traffic engineering</li>
+              <li>• QoS mechanisms (classification, marking, queuing)</li>
+              <li>• Carrier Ethernet (MEF standards)</li>
+              <li class="font-semibold">Lab: QoS policy design for VoIP + data</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEEKS 8-12 -->
+      <div class="mb-10">
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-blue-700 mb-3">
+          Weeks 8–12: Enterprise &amp; Data Center Networks
+        </h3>
+        <p class="text-sm text-slate-600 mb-5">Design campus and data center infrastructures</p>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 8: Enterprise Campus Design</p>
+            <ul class="mt-2 space-y-1">
+              <li>• 3-tier (core–distribution–access)</li>
+              <li>• Collapsed core (2-tier)</li>
+              <li>• Scalability and redundancy</li>
+              <li class="font-semibold">Lab: Design enterprise campus (500+ users, 3 buildings)</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 9: VLANs &amp; Layer 2 Technologies</p>
+            <ul class="mt-2 space-y-1">
+              <li>• VLAN design and trunking (802.1Q)</li>
+              <li>• STP / RSTP / MST</li>
+              <li>• LACP (link aggregation)</li>
+              <li class="font-semibold">Lab: VLAN design with STP redundancy</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 10: Enterprise Redundancy Protocols</p>
+            <ul class="mt-2 space-y-1">
+              <li>• HSRP, VRRP, GLBP</li>
+              <li>• High availability design</li>
+              <li>• Failover testing</li>
+              <li class="font-semibold">Lab: Design HA enterprise network</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 11: Data Center Network Architectures</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Traditional 3-tier DC design</li>
+              <li>• Leaf–Spine (Clos) architecture</li>
+              <li>• Overlay concepts (VXLAN basics)</li>
+              <li class="font-semibold">Lab: Design Leaf–Spine data center (16 servers)</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 md:col-span-2">
+            <p class="font-extrabold text-slate-900">Week 12: Data Center Technologies</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Load balancing fundamentals</li>
+              <li>• Data center interconnect (DCI)</li>
+              <li>• Storage area networks (SAN) basics</li>
+              <li class="font-semibold">Lab: Multi-site data center with DCI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEEKS 13-14 -->
+      <div class="mb-10">
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-blue-700 mb-3">
+          Weeks 13–14: Integration &amp; Troubleshooting
+        </h3>
+        <p class="text-sm text-slate-600 mb-5">Real-world problem solving</p>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 13: Network Monitoring &amp; Management</p>
+            <ul class="mt-2 space-y-1">
+              <li>• SNMP, NetFlow, sFlow</li>
+              <li>• Monitoring tools</li>
+              <li>• Capacity planning</li>
+              <li class="font-semibold">Lab: Set up monitoring for complex network</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 14: Troubleshooting Scenarios</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Systematic troubleshooting methodology</li>
+              <li>• Routing issues (OSPF, BGP)</li>
+              <li>• MPLS VPN troubleshooting</li>
+              <li>• Layer 2 problems</li>
+              <li class="font-semibold">Lab: Troubleshoot 10 broken network topologies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEEKS 15-17 -->
+      <div>
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-blue-700 mb-3">
+          Weeks 15–17: Capstone + Career Readiness
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Weeks 15–16: Capstone Project</p>
+            <p class="mt-2 font-semibold text-slate-900">Design Multi-Site Enterprise Network with MPLS</p>
+            <p class="mt-2 font-semibold">Project Components:</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Headquarters campus (1,000+ users, 5 buildings)</li>
+              <li>• Data center (Leaf–Spine architecture)</li>
+              <li>• Branch offices (3 sites, 100–200 users each)</li>
+              <li>• MPLS L3VPN connectivity + provider core</li>
+            </ul>
+            <p class="mt-3 font-semibold">Deliverables:</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Network design document (50+ pages)</li>
+              <li>• Complete IPAM plan (addressing scheme)</li>
+              <li>• Logical/physical diagrams</li>
+              <li>• Routing protocol design (OSPF, BGP, MPLS)</li>
+              <li>• VLAN + security + QoS policy</li>
+              <li>• BoM + cost estimate</li>
+              <li>• Disaster recovery plan + presentation</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+            <p class="font-extrabold text-slate-900">Week 17: Career Readiness</p>
+            <ul class="mt-2 space-y-1">
+              <li>• Resume for network engineer roles</li>
+              <li>• LinkedIn with routing/MPLS projects</li>
+              <li>• Job search (service providers, enterprises)</li>
+              <li>• Interview prep (routing scenarios, MPLS)</li>
+              <li class="font-semibold">Mock interview + feedback</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ALL PROGRAMS INCLUDE -->
+  <section class="max-w-7xl mx-auto px-6 pb-16 md:pb-20">
+    <div class="border border-slate-200 rounded-2xl p-8 bg-slate-50">
+      <h2 class="text-sm font-extrabold text-slate-900 mb-2 flex items-center gap-2">
+        <i data-lucide="layers" class="w-5 h-5 text-blue-700"></i>
+        All Programs Include
+      </h2>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+        <div class="flex gap-3">
+          <i data-lucide="clipboard-check" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Weekly quizzes</strong> (assess understanding)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="wrench" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Problem-solving sessions</strong> (troubleshoot real scenarios)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="message-circle" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Q&amp;A sessions</strong> (clarify doubts)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="book-open" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Access to training materials</strong> (PDF notes, video library)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="terminal" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Software/tool access</strong> (industry-standard and open-source)</span>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="users" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Small class size</strong> (5 students maximum)</span>
+        </div>
+        <div class="flex gap-3 md:col-span-2">
+          <i data-lucide="map-pin" class="w-5 h-5 text-blue-700"></i>
+          <span><strong>Flexible delivery</strong> (in-person Plano, TX or live online)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA + FORM -->
+  <section class="max-w-7xl mx-auto px-6 pb-10 text-center">
+    <a href="#consultation"
+       class="inline-flex items-center justify-center gap-3 bg-blue-700 hover:bg-blue-800 text-white font-extrabold py-4 px-10 rounded-full text-lg shadow-lg transition">
+      Book a Free 30-Minute Consultation
+      <i data-lucide="calendar" class="w-5 h-5"></i>
+    </a>
+    <p class="mt-4 text-xs uppercase tracking-widest text-slate-500">
+      First 3 classes are free to evaluate · Flexible payment plans available
+    </p>
+  </section>
+
+  <section id="consultation" class="max-w-4xl mx-auto px-6 pb-24">
+    <div class="bg-white border border-slate-200 rounded-2xl p-8">
+      <h2 class="text-2xl font-extrabold mb-2 text-slate-900">Request a Free 30-Minute Consultation</h2>
+      <p class="text-slate-600 text-sm mb-6">
+        Share your details and we will contact you to schedule a 30-minute call (Plano in-person or Live Online).
+      </p>
+
+      <form action="https://formsubmit.co/n.surendran@greenfluxion.com" method="POST" class="space-y-4">
+        <input type="hidden" name="_subject" value="ExploreN2P Consultation Request (IP/MPLS Program)">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Name</label>
+            <input name="name" required
+                   class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                   placeholder="Your full name" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Email</label>
+            <input name="email" type="email" required
+                   class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                   placeholder="you@example.com" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Phone (optional)</label>
+            <input name="phone"
+                   class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                   placeholder="+1 (___) ___-____" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Mode</label>
+            <select name="mode"
+                    class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600">
+              <option>Live Online</option>
+              <option>Plano, TX (In-Person)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-widest text-slate-600 mb-2">Your background & goal</label>
+          <textarea name="message" rows="4" required
+                    class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    placeholder="Tell us your background and goal (routing, MPLS, BGP, data center networking, NOC role, etc.)"></textarea>
+        </div>
+
+        <button type="submit"
+                class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full transition-all text-sm shadow-lg">
+          Submit Request
+        </button>
+
+        <p class="text-[11px] text-slate-500">
+          Note: You may be asked to confirm the first submission email to activate form delivery.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 text-sm">
+      <div class="space-y-3">
+        <p class="flex items-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4 text-blue-400"></i>
+          <span>Email:</span>
+          <span class="text-white font-semibold">n.surendran@greenfluxion.com</span>
+        </p>
+        <p class="flex items-center gap-2">
+          <i data-lucide="globe" class="w-4 h-4 text-blue-400"></i>
+          <span>Website:</span>
+          <span class="text-white font-semibold">exploren2p.com</span>
+        </p>
+        <a href="https://www.youtube.com/@exploreN2P" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-blue-400 underline underline-offset-4">
+          <i data-lucide="youtube" class="w-4 h-4"></i>
+          youtube.com/@exploreN2P
+        </a>
+      </div>
+
+      <div class="md:text-right text-xs">
+        <p class="font-bold text-blue-400 mb-2 uppercase tracking-widest">Plano Training Center</p>
+        <p class="text-slate-300 leading-relaxed">
+          ExploreN2P Academy<br>
+          9300 Coit Rd, Apt 214<br>
+          Plano, TX 75025
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mt-10 text-[10px] uppercase tracking-[0.25em] font-bold text-slate-600">
+      © 2024 ExploreN2P. Industry-Focused Telecom Training.
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+
+</body>
+</html>
